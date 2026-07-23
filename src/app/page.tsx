@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Box, Heading, Text, Flex } from "@radix-ui/themes";
-import { ArrowRightIcon, GitHubLogoIcon, LinkedInLogoIcon, SunIcon, MoonIcon, DownloadIcon } from "@radix-ui/react-icons";
+import { ArrowRightIcon, GitHubLogoIcon, LinkedInLogoIcon, SunIcon, MoonIcon, DownloadIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { projectsData, Project } from "@/data/projects";
 import ProjectModal from "@/components/ProjectModal";
@@ -118,7 +118,7 @@ export default function Home() {
               </a>
             </Flex>
 
-            {/* OVERLAPPING SIGNATURE (Larger & Slightly to the Left) */}
+            {/* OVERLAPPING SIGNATURE */}
             <div className="absolute -bottom-10 -right-2 md:-bottom-12 md:-right-2 pointer-events-none z-20 opacity-90 dark:opacity-80 rotate-[-4deg]">
               <Image 
                 src="/signature.png" 
@@ -192,7 +192,7 @@ export default function Home() {
           <span className="text-stone-400 dark:text-[#6B7280] text-sm tracking-widest">· · · ✦ · · ·</span>
         </div>
 
-        {/* WORK EXPERIENCE SECTION (Swapped to #02) */}
+        {/* WORK EXPERIENCE SECTION */}
         <section id="experience" className="mb-24 scroll-mt-32">
           <div className="grid md:grid-cols-12 gap-12 mb-12">
             <div className="md:col-span-4 p-6 rounded-2xl border transition-all duration-300 border-stone-200 bg-white/40 dark:border-[#1F2937] dark:bg-[#111827]/40 backdrop-blur-md shadow-xs">
@@ -317,7 +317,7 @@ export default function Home() {
           <span className="text-stone-400 dark:text-[#6B7280] text-sm tracking-widest">· · · ✦ · · ·</span>
         </div>
 
-        {/* PROJECTS SECTION (Swapped to #03) */}
+        {/* PROJECTS SECTION */}
         <section id="projects" className="mb-24 scroll-mt-32">
           <div className="grid md:grid-cols-12 gap-12 mb-12">
             <div className="md:col-span-4 p-6 rounded-2xl border transition-all duration-300 border-stone-200 bg-white/40 dark:border-[#1F2937] dark:bg-[#111827]/40 backdrop-blur-md shadow-xs">
@@ -383,7 +383,7 @@ export default function Home() {
             <Text size="4" className="mb-3 block font-normal text-slate-700 dark:text-[#F3F4F6]">
               Want to see more? Browse my{" "}
               <a
-                href="https://github.com/moekoch/portfolio"
+                href="https://github.com/moekoch/portfolio-rebuild"
                 target="_blank"
                 rel="noreferrer"
                 className="text-[#5E7A5A] dark:text-[#94B39C] underline decoration-[#94B39C]/60 hover:decoration-[#3E523A] transition-colors"
@@ -411,7 +411,7 @@ export default function Home() {
           <span className="text-stone-400 dark:text-[#6B7280] text-sm tracking-widest">· · · ✦ · · ·</span>
         </div>
 
-        {/* SKILLS SECTION (#04) */}
+        {/* SKILLS SECTION */}
         <section id="stack" className="mb-24 scroll-mt-32">
           <div className="grid md:grid-cols-12 gap-12 items-start">
             <div className="md:col-span-4 p-6 rounded-2xl border transition-all duration-300 border-stone-200 bg-white/40 dark:border-[#1F2937] dark:bg-[#111827]/40 backdrop-blur-md shadow-xs">
@@ -446,10 +446,28 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <a 
               href="mailto:ekoch.morgan@gmail.com" 
-              className="p-2.5 rounded-full border border-stone-300 bg-white text-slate-700 hover:border-[#5E7A5A] hover:text-[#5E7A5A] dark:border-[#374151] dark:bg-[#111827] dark:text-[#F3F4F6] dark:hover:border-[#94B39C] dark:hover:text-[#94B39C] transition-colors shadow-2xs"
+              className="p-2.5 rounded-full border border-stone-300 bg-white text-slate-700 hover:border-[#5E7A5A] hover:text-[#5E7A5A] dark:border-[#374151] dark:bg-[#111827] dark:text-[#F3F4F6] dark:hover:text-[#94B39C] dark:hover:border-[#94B39C] transition-all"
+              aria-label="Email Morgan"
             >
-              <span className="sr-only">Email</span>
-              ✉️
+              <EnvelopeClosedIcon width="18" height="18" />
+            </a>
+            <a 
+              href="https://github.com/moekoch" 
+              target="_blank" 
+              rel="noreferrer"
+              className="p-2.5 rounded-full border border-stone-300 bg-white text-slate-700 hover:border-[#5E7A5A] hover:text-[#5E7A5A] dark:border-[#374151] dark:bg-[#111827] dark:text-[#F3F4F6] dark:hover:text-[#94B39C] dark:hover:border-[#94B39C] transition-all"
+              aria-label="GitHub Profile"
+            >
+              <GitHubLogoIcon width="18" height="18" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/moekoch" 
+              target="_blank" 
+              rel="noreferrer"
+              className="p-2.5 rounded-full border border-stone-300 bg-white text-slate-700 hover:border-[#5E7A5A] hover:text-[#5E7A5A] dark:border-[#374151] dark:bg-[#111827] dark:text-[#F3F4F6] dark:hover:text-[#94B39C] dark:hover:border-[#94B39C] transition-all"
+              aria-label="LinkedIn Profile"
+            >
+              <LinkedInLogoIcon width="18" height="18" />
             </a>
           </div>
         </footer>
@@ -458,7 +476,7 @@ export default function Home() {
 
       <ProjectModal 
         project={selectedProject} 
-        isOpen={selectedProject !== null} 
+        isOpen={!!selectedProject}
         onClose={() => setSelectedProject(null)} 
       />
 
