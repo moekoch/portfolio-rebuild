@@ -7,6 +7,7 @@ import Image from "next/image";
 import { projectsData, Project } from "@/data/projects";
 import ProjectModal from "@/components/ProjectModal";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -480,6 +481,7 @@ export default function Home() {
       />
 
       <Analytics />
+      <SpeedInsights />
     </main>
   );
 }
