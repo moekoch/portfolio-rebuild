@@ -72,9 +72,9 @@ export default function Home() {
         <div className="flex items-center gap-6">
           <nav className="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-slate-900 dark:text-[#F3F4F6]">
             <a href="#contact" className="hover:text-[#5E7A5A] dark:hover:text-[#94B39C] transition-colors">Connect</a>
-            <a href="#projects" className="hover:text-[#5E7A5A] dark:hover:text-[#94B39C] transition-colors">Projects</a>
             <a href="#experience" className="hover:text-[#5E7A5A] dark:hover:text-[#94B39C] transition-colors">Experience</a>
-            <a href="#about" className="hover:text-[#5E7A5A] dark:hover:text-[#94B39C] transition-colors">About</a>
+            <a href="#projects" className="hover:text-[#5E7A5A] dark:hover:text-[#94B39C] transition-colors">Projects</a>
+            <a href="#stack" className="hover:text-[#5E7A5A] dark:hover:text-[#94B39C] transition-colors">Stack</a>
           </nav>
 
           <button 
@@ -379,15 +379,27 @@ export default function Home() {
 
           <div className="text-center p-8 rounded-3xl border backdrop-blur-md transition-all duration-300 border-stone-200 bg-white/40 dark:border-[#1F2937] dark:bg-[#111827]/40 shadow-xs">
             <Text size="4" className="mb-3 block font-normal text-slate-700 dark:text-[#F3F4F6]">
-              Want to see more?
+              Want to see more? Browse my{" "}
+              <a
+                href="https://github.com/moekoch/portfolio"
+                target="_blank"
+                rel="noreferrer"
+                className="text-[#5E7A5A] dark:text-[#94B39C] underline decoration-[#94B39C]/60 hover:decoration-[#3E523A] transition-colors"
+              >
+                code behind this website
+              </a>
+              {" "}and the rest of my work on GitHub.
             </Text>
-            <a 
-              href="https://github.com/moekoch" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="inline-flex items-center gap-2 text-[#5E7A5A] dark:text-[#94B39C] font-medium text-xs tracking-widest uppercase hover:text-[#3E523A] dark:hover:text-[#B4D0B8] transition-colors border-b border-[#94B39C]/60 dark:border-[#94B39C] hover:border-[#3E523A] pb-1"
+
+            <a
+              href="https://github.com/moekoch"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-[#5E7A5A] dark:text-[#94B39C] text-xs tracking-widest uppercase hover:text-[#3E523A] dark:hover:text-[#B4D0B8] transition-colors"
             >
-              Check out my GitHub!
+              <span className="font-bold underline underline-offset-4 decoration-[#94B39C]/70 hover:decoration-[#3E523A]">
+                Explore my GitHub
+              </span>
               <ArrowRightIcon />
             </a>
           </div>
@@ -397,8 +409,8 @@ export default function Home() {
           <span className="text-stone-400 dark:text-[#6B7280] text-sm tracking-widest">· · · ✦ · · ·</span>
         </div>
 
-        {/* ABOUT & SKILLS SECTION */}
-        <section id="about" className="mb-24 scroll-mt-32">
+        {/* SKILLS SECTION */}
+        <section id="stack" className="mb-24 scroll-mt-32">
           <div className="grid md:grid-cols-12 gap-12 items-start">
             <div className="md:col-span-4 p-6 rounded-2xl border transition-all duration-300 border-stone-200 bg-white/40 dark:border-[#1F2937] dark:bg-[#111827]/40 backdrop-blur-md shadow-xs">
               <Text className="font-mono text-5xl tracking-tighter text-stone-400 dark:text-[#9CA3AF]">04</Text>
