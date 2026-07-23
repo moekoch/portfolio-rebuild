@@ -7,11 +7,12 @@ import Image from "next/image";
 
 interface ProjectModalProps {
   project: Project | null;
+  isOpen: boolean;
   onClose: () => void;
 }
 
-export default function ProjectModal({ project, onClose }: ProjectModalProps) {
-  if (!project) return null;
+export default function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
+  if (!project || !isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in" onClick={onClose}>
