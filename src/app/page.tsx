@@ -228,7 +228,7 @@ export default function Home() {
               <div className="absolute top-0 left-0 w-2 h-full bg-[#94B39C] transition-colors"></div>
               <Flex justify="between" align="baseline" className="mb-1 flex-wrap gap-2">
                 <Heading size="5" className="tracking-tight text-slate dark:text-[#F3F4F6]">IT Product Management Intern</Heading>
-                <Text className="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-[#94B39C]/15 text-[#3E523A] border border-[#94B39C]/30 dark:bg-[#0B0F19] dark:text-[#94B39C] dark:border-[#1F2937]">May 2026 - July 2027</Text>
+                <Text className="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-[#94B39C]/15 text-[#3E523A] border border-[#94B39C]/30 dark:bg-[#0B0F19] dark:text-[#94B39C] dark:border-[#1F2937]">May 2026 - July 2026</Text>
               </Flex>
               <Text className="text-[#5E7A5A] dark:text-[#94B39C] text-xs font-bold tracking-widest uppercase mb-6 block">Members 1st Federal Credit Union | Enola, PA</Text>
               <ul className="list-none space-y-3">
