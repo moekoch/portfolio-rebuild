@@ -7,7 +7,7 @@ import Image from "next/image";
 import { projectsData, Project } from "@/data/projects";
 import ProjectModal from "@/components/ProjectModal";
 import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -74,8 +74,8 @@ export default function Home() {
         <div className="flex items-center gap-6">
           <nav className="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-slate-900 dark:text-[#F3F4F6]">
             <a href="#contact" className="hover:text-[#5E7A5A] dark:hover:text-[#94B39C] transition-colors">Connect</a>
-            <a href="#projects" className="hover:text-[#5E7A5A] dark:hover:text-[#94B39C] transition-colors">Projects</a>
             <a href="#experience" className="hover:text-[#5E7A5A] dark:hover:text-[#94B39C] transition-colors">Experience</a>
+            <a href="#projects" className="hover:text-[#5E7A5A] dark:hover:text-[#94B39C] transition-colors">Projects</a>
             <a href="#stack" className="hover:text-[#5E7A5A] dark:hover:text-[#94B39C] transition-colors">Stack</a>
           </nav>
 
@@ -192,11 +192,136 @@ export default function Home() {
           <span className="text-stone-400 dark:text-[#6B7280] text-sm tracking-widest">· · · ✦ · · ·</span>
         </div>
 
-        {/* PROJECTS SECTION */}
-        <section id="projects" className="mb-24 scroll-mt-32">
+        {/* WORK EXPERIENCE SECTION (Swapped to #02) */}
+        <section id="experience" className="mb-24 scroll-mt-32">
           <div className="grid md:grid-cols-12 gap-12 mb-12">
             <div className="md:col-span-4 p-6 rounded-2xl border transition-all duration-300 border-stone-200 bg-white/40 dark:border-[#1F2937] dark:bg-[#111827]/40 backdrop-blur-md shadow-xs">
               <Text className="font-mono text-5xl tracking-tighter text-stone-400 dark:text-[#9CA3AF]">02</Text>
+              <Heading size="6" className="mt-2 uppercase tracking-widest text-sm text-slate dark:text-[#F3F4F6]">Work Experience</Heading>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-8">
+            
+            <Box className="group p-8 rounded-3xl border transition-all duration-500 relative overflow-hidden border-stone-200 bg-white/80 shadow-sm dark:border-[#1F2937] dark:bg-[#111827]/80 dark:text-[#F3F4F6] backdrop-blur-md">
+              <div className="absolute top-0 left-0 w-2 h-full bg-[#E09F84] transition-colors"></div>
+              <Flex justify="between" align="baseline" className="mb-1 flex-wrap gap-2">
+                <Heading size="5" className="tracking-tight text-slate dark:text-[#F3F4F6]">App Development Manager / Software Engineer</Heading>
+                <Text className="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-[#E09F84]/15 text-[#9E5D42] border border-[#E09F84]/30 dark:bg-[#0B0F19] dark:text-[#E09F84] dark:border-[#1F2937]">March 2025 - Present</Text>
+              </Flex>
+              <Text className="text-[#C66B4E] dark:text-[#E09F84] text-xs font-bold tracking-widest uppercase mb-6 block">The VAR Lab @ Penn State Behrend | Erie, PA</Text>
+              <ul className="list-none space-y-3">
+                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
+                  <span className="text-[#C66B4E] dark:text-[#E09F84] mt-1 font-bold">▪</span>
+                  Engineered and deployed Landing Place, an AI-enabled React Native/Expo mobile application (iOS) for clinical research and outcome tracking.
+                </li>
+                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
+                  <span className="text-[#C66B4E] dark:text-[#E09F84] mt-1 font-bold">▪</span>
+                  Revived a non-functional legacy codebase and led a 5-person team to deliver a production-ready application within 1 academic year.
+                </li>
+                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
+                  <span className="text-[#C66B4E] dark:text-[#E09F84] mt-1 font-bold">▪</span>
+                  Owned the end-to-end release lifecycle, including build automation, versioning, provisioning, and TestFlight distribution for internal testing and active clinical trials deployed to ~80 participants.
+                </li>
+              </ul>
+            </Box>
+
+            <Box className="group p-8 rounded-3xl border transition-all duration-500 relative overflow-hidden border-stone-200 bg-white/80 shadow-sm dark:border-[#1F2937] dark:bg-[#111827]/80 dark:text-[#F3F4F6] backdrop-blur-md">
+              <div className="absolute top-0 left-0 w-2 h-full bg-[#94B39C] transition-colors"></div>
+              <Flex justify="between" align="baseline" className="mb-1 flex-wrap gap-2">
+                <Heading size="5" className="tracking-tight text-slate dark:text-[#F3F4F6]">IT Product Management Intern</Heading>
+                <Text className="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-[#94B39C]/15 text-[#3E523A] border border-[#94B39C]/30 dark:bg-[#0B0F19] dark:text-[#94B39C] dark:border-[#1F2937]">May 2026 - July 2026</Text>
+              </Flex>
+              <Text className="text-[#5E7A5A] dark:text-[#94B39C] text-xs font-bold tracking-widest uppercase mb-6 block">Members 1st Federal Credit Union | Enola, PA</Text>
+              <ul className="list-none space-y-3">
+                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
+                  <span className="text-[#5E7A5A] dark:text-[#94B39C] mt-1 font-bold">▪</span>
+                  Defined the technical implementation strategy for an AI-driven smart summary/chat module within digital banking.
+                </li>
+                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
+                  <span className="text-[#5E7A5A] dark:text-[#94B39C] mt-1 font-bold">▪</span>
+                  Evaluated and documented AI architectural patterns within Azure, establishing clear implementation methodologies for when to utilize LlamaIndex (RAG-heavy tasks) versus LangChain (agentic workflows) across legacy banking infrastructure.
+                </li>
+                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
+                  <span className="text-[#5E7A5A] dark:text-[#94B39C] mt-1 font-bold">▪</span>
+                  Conducted market and competitive research on AI-driven fintech experiences, establishing best practices for conversational banking, guardrails, auditability, and responsible AI deployment in regulated environments.
+                </li>
+              </ul>
+            </Box>
+
+            <Box className="group p-8 rounded-3xl border transition-all duration-500 relative overflow-hidden border-stone-200 bg-white/80 shadow-sm dark:border-[#1F2937] dark:bg-[#111827]/80 dark:text-[#F3F4F6] backdrop-blur-md">
+              <div className="absolute top-0 left-0 w-2 h-full bg-[#B4C5D2] transition-colors"></div>
+              <Flex justify="between" align="baseline" className="mb-1 flex-wrap gap-2">
+                <Heading size="5" className="tracking-tight text-slate dark:text-[#F3F4F6]">Student Technician</Heading>
+                <Text className="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-[#B4C5D2]/15 text-[#4A6378] border border-[#B4C5D2]/30 dark:bg-[#0B0F19] dark:text-[#B4C5D2] dark:border-[#1F2937]">April 2024 - December 2025</Text>
+              </Flex>
+              <Text className="text-[#5B7891] dark:text-[#B4C5D2] text-xs font-bold tracking-widest uppercase mb-6 block">Penn State Erie, The Behrend College | Erie, Pennsylvania, United States</Text>
+              <ul className="list-none space-y-3">
+                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
+                  <span className="text-[#5B7891] dark:text-[#B4C5D2] mt-1 font-bold">▪</span>
+                  Provided IT support in 30+ computer labs, classrooms, and offices.
+                </li>
+                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
+                  <span className="text-[#5B7891] dark:text-[#B4C5D2] mt-1 font-bold">▪</span>
+                  Responded to staff members to resolve 200+ tech-related issues using ticketing system ServiceNow.
+                </li>
+                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
+                  <span className="text-[#5B7891] dark:text-[#B4C5D2] mt-1 font-bold">▪</span>
+                  Processed salvageable devices and securely wiped 100+ disks using KillDisk.
+                </li>
+              </ul>
+            </Box>
+
+            <Box className="group p-8 rounded-3xl border transition-all duration-500 relative overflow-hidden border-stone-200 bg-white/80 shadow-sm dark:border-[#1F2937] dark:bg-[#111827]/80 dark:text-[#F3F4F6] backdrop-blur-md">
+              <div className="absolute top-0 left-0 w-2 h-full bg-[#D8B963] transition-colors"></div>
+              <Flex justify="between" align="baseline" className="mb-1 flex-wrap gap-2">
+                <Heading size="5" className="tracking-tight text-slate dark:text-[#F3F4F6]">IT Project Management Intern</Heading>
+                <Text className="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-[#D8B963]/15 text-[#856D29] border border-[#D8B963]/30 dark:bg-[#0B0F19] dark:text-[#D8B963] dark:border-[#1F2937]">May 2025 - August 2025</Text>
+              </Flex>
+              <Text className="text-[#B59436] dark:text-[#D8B963] text-xs font-bold tracking-widest uppercase mb-6 block">TE Connectivity | Middletown, PA</Text>
+              <ul className="list-none space-y-3">
+                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
+                  <span className="text-[#B59436] dark:text-[#D8B963] mt-1 font-bold">▪</span>
+                  Facilitated 15+ stakeholder alignment meetings across 4 multi-functional corporate teams, tracking project milestones and managing cross-departmental communications.
+                </li>
+                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
+                  <span className="text-[#B59436] dark:text-[#D8B963] mt-1 font-bold">▪</span>
+                  Contributed to foundational documentation, authoring 10+ core components of Concept of Operations (CONOPS), Business Requirement Documents (BRDs), and RASCI charts.
+                </li>
+              </ul>
+            </Box>
+
+            <Box className="group p-8 rounded-3xl border transition-all duration-500 relative overflow-hidden border-stone-200 bg-white/80 shadow-sm dark:border-[#1F2937] dark:bg-[#111827]/80 dark:text-[#F3F4F6] backdrop-blur-md">
+              <div className="absolute top-0 left-0 w-2 h-full bg-[#C66B4E] transition-colors"></div>
+              <Flex justify="between" align="baseline" className="mb-1 flex-wrap gap-2">
+                <Heading size="5" className="tracking-tight text-slate dark:text-[#F3F4F6]">Information Technology Intern</Heading>
+                <Text className="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-[#C66B4E]/15 text-[#8C3F26] border border-[#C66B4E]/30 dark:bg-[#0B0F19] dark:text-[#C66B4E] dark:border-[#1F2937]">June 2023 - August 2024</Text>
+              </Flex>
+              <Text className="text-[#C66B4E] dark:text-[#C66B4E] text-xs font-bold tracking-widest uppercase mb-6 block">Big Spring School District | Newville, PA</Text>
+              <ul className="list-none space-y-3">
+                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
+                  <span className="text-[#C66B4E] dark:text-[#C66B4E] mt-1 font-bold">▪</span>
+                  Collaborated with a 3-person team to facilitate device preparation and domain deployment for 1,500+ student units.
+                </li>
+                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
+                  <span className="text-[#C66B4E] dark:text-[#C66B4E] mt-1 font-bold">▪</span>
+                  Repaired 250+ student laptops and streamlined district inventory workflows.
+                </li>
+              </ul>
+            </Box>
+
+          </div>
+        </section>
+
+        <div className="my-24 text-center">
+          <span className="text-stone-400 dark:text-[#6B7280] text-sm tracking-widest">· · · ✦ · · ·</span>
+        </div>
+
+        {/* PROJECTS SECTION (Swapped to #03) */}
+        <section id="projects" className="mb-24 scroll-mt-32">
+          <div className="grid md:grid-cols-12 gap-12 mb-12">
+            <div className="md:col-span-4 p-6 rounded-2xl border transition-all duration-300 border-stone-200 bg-white/40 dark:border-[#1F2937] dark:bg-[#111827]/40 backdrop-blur-md shadow-xs">
+              <Text className="font-mono text-5xl tracking-tighter text-stone-400 dark:text-[#9CA3AF]">03</Text>
               <Heading size="6" className="mt-2 uppercase tracking-widest text-sm text-slate dark:text-[#F3F4F6]">Featured Projects</Heading>
             </div>
           </div>
@@ -207,7 +332,7 @@ export default function Home() {
               const cardAccents = [
                 { badgeBg: "bg-[#E09F84]/15", badgeText: "text-[#9E5D42]", badgeBorder: "border-[#E09F84]/30", hoverBorder: "hover:border-[#E09F84]", headingHover: "group-hover:text-[#C66B4E] dark:group-hover:text-[#E09F84]", linkText: "text-[#C66B4E] dark:text-[#E09F84]", linkBorder: "border-[#E09F84]" },
                 { badgeBg: "bg-[#D8B963]/15", badgeText: "text-[#856D29]", badgeBorder: "border-[#D8B963]/30", hoverBorder: "hover:border-[#D8B963]", headingHover: "group-hover:text-[#B59436] dark:group-hover:text-[#D8B963]", linkText: "text-[#B59436] dark:text-[#D8B963]", linkBorder: "border-[#D8B963]" },
-                { badgeBg: "bg-[#B4C5D2]/15", badgeText: "text-[#4A6378]", badgeBorder: "border-[#B4C5D2]/30", hoverBorder: "hover:border-[#B4C5D2]", headingHover: "group-hover:text-[#5B7891] dark:group-hover:text-[#B4C5D2]", linkText: "text-[#5B7891] dark:text-[#B4C5D2]", linkBorder: "border-[#B4C5D2]" },
+                { badgeBg: "bg-[#B4C5D2]/15", badgeText: "text-[#4A6378]", badgeBorder: "border-[#B4C5D2]/30", hoverBorder: "hover:border-[#B4C5D2]", headingHover: "group-hover:text-[#5B7891] dark:group-hover:text-[#B4C5D2]", linkText: "text-[#5B7891] dark:group-hover:text-[#B4C5D2]", linkBorder: "border-[#B4C5D2]" },
                 { badgeBg: "bg-[#C66B4E]/15", badgeText: "text-[#8C3F26]", badgeBorder: "border-[#C66B4E]/30", hoverBorder: "hover:border-[#C66B4E]", headingHover: "group-hover:text-[#C66B4E] dark:group-hover:text-[#C66B4E]", linkText: "text-[#C66B4E] dark:text-[#C66B4E]", linkBorder: "border-[#C66B4E]" },
               ];
               const accent = cardAccents[idx % cardAccents.length];
@@ -286,132 +411,7 @@ export default function Home() {
           <span className="text-stone-400 dark:text-[#6B7280] text-sm tracking-widest">· · · ✦ · · ·</span>
         </div>
 
-        {/* WORK EXPERIENCE SECTION */}
-        <section id="experience" className="mb-24 scroll-mt-32">
-          <div className="grid md:grid-cols-12 gap-12 mb-12">
-            <div className="md:col-span-4 p-6 rounded-2xl border transition-all duration-300 border-stone-200 bg-white/40 dark:border-[#1F2937] dark:bg-[#111827]/40 backdrop-blur-md shadow-xs">
-              <Text className="font-mono text-5xl tracking-tighter text-stone-400 dark:text-[#9CA3AF]">03</Text>
-              <Heading size="6" className="mt-2 uppercase tracking-widest text-sm text-slate dark:text-[#F3F4F6]">Work Experience</Heading>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-8">
-            
-            <Box className="group p-8 rounded-3xl border transition-all duration-500 relative overflow-hidden border-stone-200 bg-white/80 shadow-sm dark:border-[#1F2937] dark:bg-[#111827]/80 dark:text-[#F3F4F6] backdrop-blur-md">
-              <div className="absolute top-0 left-0 w-2 h-full bg-[#E09F84] transition-colors"></div>
-              <Flex justify="between" align="baseline" className="mb-1 flex-wrap gap-2">
-                <Heading size="5" className="tracking-tight text-slate dark:text-[#F3F4F6]">App Development Manager / Software Engineer</Heading>
-                <Text className="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-[#E09F84]/15 text-[#9E5D42] border border-[#E09F84]/30 dark:bg-[#0B0F19] dark:text-[#E09F84] dark:border-[#1F2937]">March 2025 - Present</Text>
-              </Flex>
-              <Text className="text-[#C66B4E] dark:text-[#E09F84] text-xs font-bold tracking-widest uppercase mb-6 block">The VAR Lab @ Penn State Behrend | Erie, PA</Text>
-              <ul className="list-none space-y-3">
-                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
-                  <span className="text-[#C66B4E] dark:text-[#E09F84] mt-1 font-bold">▪</span>
-                  Engineered and deployed Landing Place, an AI-enabled React Native/Expo mobile application (iOS) for clinical research and outcome tracking.
-                </li>
-                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
-                  <span className="text-[#C66B4E] dark:text-[#E09F84] mt-1 font-bold">▪</span>
-                  Revived a non-functional legacy codebase and led a five-person team to deliver a production-ready application within one academic year.
-                </li>
-                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
-                  <span className="text-[#C66B4E] dark:text-[#E09F84] mt-1 font-bold">▪</span>
-                  Owned the end-to-end release lifecycle, including build automation, versioning, provisioning, and TestFlight distribution for internal testing and active clinical trials deployed to ~80 participants.
-                </li>
-              </ul>
-            </Box>
-
-            <Box className="group p-8 rounded-3xl border transition-all duration-500 relative overflow-hidden border-stone-200 bg-white/80 shadow-sm dark:border-[#1F2937] dark:bg-[#111827]/80 dark:text-[#F3F4F6] backdrop-blur-md">
-              <div className="absolute top-0 left-0 w-2 h-full bg-[#94B39C] transition-colors"></div>
-              <Flex justify="between" align="baseline" className="mb-1 flex-wrap gap-2">
-                <Heading size="5" className="tracking-tight text-slate dark:text-[#F3F4F6]">IT Product Management Intern</Heading>
-                <Text className="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-[#94B39C]/15 text-[#3E523A] border border-[#94B39C]/30 dark:bg-[#0B0F19] dark:text-[#94B39C] dark:border-[#1F2937]">May 2026 - July 2026</Text>
-              </Flex>
-              <Text className="text-[#5E7A5A] dark:text-[#94B39C] text-xs font-bold tracking-widest uppercase mb-6 block">Members 1st Federal Credit Union | Enola, PA</Text>
-              <ul className="list-none space-y-3">
-                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
-                  <span className="text-[#5E7A5A] dark:text-[#94B39C] mt-1 font-bold">▪</span>
-                  Defined the technical implementation strategy for an AI-driven smart summary/chat module within digital banking.
-                </li>
-                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
-                  <span className="text-[#5E7A5A] dark:text-[#94B39C] mt-1 font-bold">▪</span>
-                  Evaluated and documented AI architectural patterns within Azure, establishing clear implementation methodologies for when to utilize LlamaIndex (RAG-heavy tasks) versus LangChain (agentic workflows) across legacy banking infrastructure.
-                </li>
-                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
-                  <span className="text-[#5E7A5A] dark:text-[#94B39C] mt-1 font-bold">▪</span>
-                  Conducted market and competitive research on AI-driven fintech experiences, establishing best practices for conversational banking, guardrails, auditability, and responsible AI deployment in regulated environments.
-                </li>
-              </ul>
-            </Box>
-
-            <Box className="group p-8 rounded-3xl border transition-all duration-500 relative overflow-hidden border-stone-200 bg-white/80 shadow-sm dark:border-[#1F2937] dark:bg-[#111827]/80 dark:text-[#F3F4F6] backdrop-blur-md">
-              <div className="absolute top-0 left-0 w-2 h-full bg-[#B4C5D2] transition-colors"></div>
-              <Flex justify="between" align="baseline" className="mb-1 flex-wrap gap-2">
-                <Heading size="5" className="tracking-tight text-slate dark:text-[#F3F4F6]">Student Technician</Heading>
-                <Text className="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-[#B4C5D2]/15 text-[#4A6378] border border-[#B4C5D2]/30 dark:bg-[#0B0F19] dark:text-[#B4C5D2] dark:border-[#1F2937]">April 2024 - December 2025</Text>
-              </Flex>
-              <Text className="text-[#5B7891] dark:text-[#B4C5D2] text-xs font-bold tracking-widest uppercase mb-6 block">Penn State Erie, The Behrend College | Erie, Pennsylvania, United States</Text>
-              <ul className="list-none space-y-3">
-                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
-                  <span className="text-[#5B7891] dark:text-[#B4C5D2] mt-1 font-bold">▪</span>
-                  Provide IT support in computer labs, classrooms, and offices.
-                </li>
-                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
-                  <span className="text-[#5B7891] dark:text-[#B4C5D2] mt-1 font-bold">▪</span>
-                  Respond to staff members to resolve tech-related issues using ticketing system ServiceNow.
-                </li>
-                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
-                  <span className="text-[#5B7891] dark:text-[#B4C5D2] mt-1 font-bold">▪</span>
-                  Process salvageable devices and wipe disks using KillDisk.
-                </li>
-              </ul>
-            </Box>
-
-            <Box className="group p-8 rounded-3xl border transition-all duration-500 relative overflow-hidden border-stone-200 bg-white/80 shadow-sm dark:border-[#1F2937] dark:bg-[#111827]/80 dark:text-[#F3F4F6] backdrop-blur-md">
-              <div className="absolute top-0 left-0 w-2 h-full bg-[#D8B963] transition-colors"></div>
-              <Flex justify="between" align="baseline" className="mb-1 flex-wrap gap-2">
-                <Heading size="5" className="tracking-tight text-slate dark:text-[#F3F4F6]">IT Project Management Intern</Heading>
-                <Text className="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-[#D8B963]/15 text-[#856D29] border border-[#D8B963]/30 dark:bg-[#0B0F19] dark:text-[#D8B963] dark:border-[#1F2937]">May 2025 - August 2025</Text>
-              </Flex>
-              <Text className="text-[#B59436] dark:text-[#D8B963] text-xs font-bold tracking-widest uppercase mb-6 block">TE Connectivity | Middletown, PA</Text>
-              <ul className="list-none space-y-3">
-                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
-                  <span className="text-[#B59436] dark:text-[#D8B963] mt-1 font-bold">▪</span>
-                  Facilitated stakeholder alignment meetings across multi-functional corporate teams, tracking project milestones and managing cross-departmental communications.
-                </li>
-                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
-                  <span className="text-[#B59436] dark:text-[#D8B963] mt-1 font-bold">▪</span>
-                  Contributed to the foundational documentation, authoring components of Concept of Operations (CONOPS), Business Requirement Documents (BRDs), and RASCI charts.
-                </li>
-              </ul>
-            </Box>
-
-            <Box className="group p-8 rounded-3xl border transition-all duration-500 relative overflow-hidden border-stone-200 bg-white/80 shadow-sm dark:border-[#1F2937] dark:bg-[#111827]/80 dark:text-[#F3F4F6] backdrop-blur-md">
-              <div className="absolute top-0 left-0 w-2 h-full bg-[#C66B4E] transition-colors"></div>
-              <Flex justify="between" align="baseline" className="mb-1 flex-wrap gap-2">
-                <Heading size="5" className="tracking-tight text-slate dark:text-[#F3F4F6]">Information Technology Intern</Heading>
-                <Text className="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-[#C66B4E]/15 text-[#8C3F26] border border-[#C66B4E]/30 dark:bg-[#0B0F19] dark:text-[#C66B4E] dark:border-[#1F2937]">June 2023 - August 2024</Text>
-              </Flex>
-              <Text className="text-[#C66B4E] dark:text-[#C66B4E] text-xs font-bold tracking-widest uppercase mb-6 block">Big Spring School District | Newville, PA</Text>
-              <ul className="list-none space-y-3">
-                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
-                  <span className="text-[#C66B4E] dark:text-[#C66B4E] mt-1 font-bold">▪</span>
-                  Collaborated with a team to facilitate device preparation and domain deployment.
-                </li>
-                <li className="text-sm leading-relaxed font-normal flex items-start gap-3 text-slate-700 dark:text-[#D1D5DB]">
-                  <span className="text-[#C66B4E] dark:text-[#C66B4E] mt-1 font-bold">▪</span>
-                  Repaired student laptops and streamlined inventory workflows.
-                </li>
-              </ul>
-            </Box>
-
-          </div>
-        </section>
-
-        <div className="my-24 text-center">
-          <span className="text-stone-400 dark:text-[#6B7280] text-sm tracking-widest">· · · ✦ · · ·</span>
-        </div>
-
-        {/* SKILLS SECTION */}
+        {/* SKILLS SECTION (#04) */}
         <section id="stack" className="mb-24 scroll-mt-32">
           <div className="grid md:grid-cols-12 gap-12 items-start">
             <div className="md:col-span-4 p-6 rounded-2xl border transition-all duration-300 border-stone-200 bg-white/40 dark:border-[#1F2937] dark:bg-[#111827]/40 backdrop-blur-md shadow-xs">
@@ -420,10 +420,10 @@ export default function Home() {
             </div>
             <div className="md:col-span-8 p-8 rounded-3xl border transition-all duration-500 border-stone-200 bg-white/80 shadow-sm dark:border-[#1F2937] dark:bg-[#111827]/80 dark:text-[#F3F4F6] backdrop-blur-md">
               <Heading size="7" className="mb-6 leading-tight tracking-tight text-slate dark:text-[#F3F4F6]">
-                Engineering robust digital ecosystems with modern infrastructure.
+                Building modern software with a focus on thoughtful engineering.
               </Heading>
               <Text size="4" className="leading-relaxed mb-8 block font-normal text-slate-700 dark:text-[#D1D5DB]">
-                Drawn to applied AI, retrieval-augmented generation (RAG), and agentic workflows designed responsibly for regulated industries. Certified in NVIDIA Fundamentals of Deep Learning.
+                I enjoy developing full-stack applications and exploring applied AI, retrieval-augmented generation (RAG), and agentic workflows that solve practical problems.
               </Text>
               
               <div className="flex flex-wrap gap-2">
@@ -447,27 +447,9 @@ export default function Home() {
             <a 
               href="mailto:ekoch.morgan@gmail.com" 
               className="p-2.5 rounded-full border border-stone-300 bg-white text-slate-700 hover:border-[#5E7A5A] hover:text-[#5E7A5A] dark:border-[#374151] dark:bg-[#111827] dark:text-[#F3F4F6] dark:hover:border-[#94B39C] dark:hover:text-[#94B39C] transition-colors shadow-2xs"
-              aria-label="Email Me"
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            </a>
-            <a 
-              href="https://github.com/moekoch" 
-              className="p-2.5 rounded-full border border-stone-300 bg-white text-slate-700 hover:border-[#5E7A5A] hover:text-[#5E7A5A] dark:border-[#374151] dark:bg-[#111827] dark:text-[#F3F4F6] dark:hover:border-[#94B39C] dark:hover:text-[#94B39C] transition-colors shadow-2xs"
-              aria-label="GitHub"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <GitHubLogoIcon width="18" height="18" />
-            </a>
-            <a 
-              href="https://www.linkedin.com/in/moekoch" 
-              className="p-2.5 rounded-full border border-stone-300 bg-white text-slate-700 hover:border-[#5E7A5A] hover:text-[#5E7A5A] dark:border-[#374151] dark:bg-[#111827] dark:text-[#F3F4F6] dark:hover:border-[#94B39C] dark:hover:text-[#94B39C] transition-colors shadow-2xs"
-              aria-label="LinkedIn"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <LinkedInLogoIcon width="18" height="18" />
+              <span className="sr-only">Email</span>
+              ✉️
             </a>
           </div>
         </footer>
